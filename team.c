@@ -65,13 +65,14 @@ void recursiveDisplayTeammate(Teammate *teammate) {
 }
 
 void recursiveDisplayTeam(Team *team) {
+    printf("Team : %s\n", team->name);
     recursiveDisplayTeammate(team->head);
 }
 
 void deleteCharacterFromTeam(Team *team, Character *character) {
     Teammate *temp = team->head;
     Teammate *ptemp = NULL;
-    if (team->head != NULL && team->head->value == character) {
+    if ((team->head != NULL) && (team->head->value == character)) {
         ptemp = team->head;
         team->head = team->head->next;
         deleteTeammate(ptemp);
