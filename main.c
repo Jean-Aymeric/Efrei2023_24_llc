@@ -6,7 +6,9 @@ int main() {
     addToTeam(team, createCharacter("Valentin", 20, 10));
     addToTeam(team, createCharacter("Samy", 20, 10));
     addToTeam(team, createCharacter("Jayan", 20, 10));
-    addToTeam(team, createCharacter("Hugo", 20, 10));
+    addFirstToTeam(team, createCharacter("Hugo", 20, 10));
+
     displayTeam(team);
+    recursiveDisplayTeam(team);
     return 0;
 }

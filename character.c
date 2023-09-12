@@ -21,5 +21,5 @@ void deleteCharacter(Character *character){
 }
 
 void displayCharacter(Character *character){
-    printf("Name : %s \nLife Points : %d \n Level : %d",character->name, character->lifePoints,character->level);
+    printf("Name : %s \tLife Points : %d \tLevel : %d\n",character->name, character->lifePoints,character->level);
 }

@@ -14,11 +14,19 @@ typedef struct Teammate {
 
 typedef struct Team {
     char name[100];
-    Teammate* head;
+    Teammate *head;
 } Team;
 
-Team* createTeam(char *name);
+Team *createTeam(char *name);
+
 void addToTeam(Team *team, Character *character);
+
+void addFirstToTeam(Team *team, Character *character);
+
 void displayTeam(Team *team);
+
+void recursiveDisplayTeam(Team *team);
+
+void deleteCharacterFromTeam(Team *team, Character *character);
 
 #endif //EFREI2023_24_LLC_TEAM_H
