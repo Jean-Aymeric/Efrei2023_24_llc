@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "team.h"
+#include "product.h"
 
 int main() {
     Team *team = createTeam("L2");
@@ -15,5 +16,16 @@ int main() {
     recursiveDeleteCharacterFromTeam(team, hugo);
     recursiveDeleteCharacterFromTeam(team, jayan);
     recursiveDisplayTeam(team);
+
+    ProductList productList;
+
+
+    addProductInProductList(&productList, createProduct("Smartphone 2", 400, 0.2));
+    addProductInProductList(&productList, createProduct("Smartphone 3", 300, 0.2));
+    addProductInProductList(&productList, createProduct("Smartphone 1", 200, 0.2));
+    displayProductList(productList);
+
+    printf("Nb éléments : %d\n", countProductsInList(productList));
+    printf("Tri croissant : %d\n", isProductListOrderedByPrice(productList));
     return 0;
 }
