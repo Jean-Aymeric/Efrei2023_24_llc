@@ -87,3 +87,24 @@ void deleteCharacterFromTeam(Team *team, Character *character) {
         }
     }
 }
+
+Teammate *recursiveDeleteCharacterFromTeamByTeammate(Teammate *teammate, Character *character) {
+    if (teammate != NULL) {
+        if (teammate->value == character) {
+            Teammate *temp = teammate->next;
+            deleteTeammate(teammate);
+            return temp;
+        } else {
+            teammate->next = recursiveDeleteCharacterFromTeamByTeammate(teammate->next, character);
+            return teammate;
+        }
+    } else {
+        return NULL;
+    }
+}
+
+void recursiveDeleteCharacterFromTeam(Team *team, Character *character) {
+    team->head = recursiveDeleteCharacterFromTeamByTeammate(team->head, character);
+}
+
+

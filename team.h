@@ -29,4 +29,6 @@ void recursiveDisplayTeam(Team *team);
 
 void deleteCharacterFromTeam(Team *team, Character *character);
 
+void recursiveDeleteCharacterFromTeam(Team *team, Character *character);
+
 #endif //EFREI2023_24_LLC_TEAM_H

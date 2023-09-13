@@ -12,8 +12,8 @@ int main() {
     addFirstToTeam(team, hugo);
 
     displayTeam(team);
-    deleteCharacterFromTeam(team, hugo);
-    deleteCharacterFromTeam(team, jayan);
+    recursiveDeleteCharacterFromTeam(team, hugo);
+    recursiveDeleteCharacterFromTeam(team, jayan);
     recursiveDisplayTeam(team);
     return 0;
 }
